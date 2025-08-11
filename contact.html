@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Kopykat Digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo" aria-label="Kopykat Digital Logo">
+      <!-- Cat Logo SVG -->
+      <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
+        <circle cx="32" cy="32" r="28" fill="#ff4081" />
+        <path fill="#fff" d="M20 40c5-12 24-12 24 0v4H20v-4z" />
+        <circle cx="22" cy="28" r="4" fill="#222">
+          <animate attributeName="r" values="4;1;4" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="42" cy="28" r="4" fill="#222">
+          <animate attributeName="r" values="4;1;4" dur="3s" begin="1.5s" repeatCount="indefinite" />
+        </circle>
+        <path fill="#fff" d="M54 40c-2 6-12 6-10 0" transform-origin="54 40" style="transform-box: fill-box; animation: tailwag 1.5s infinite alternate ease-in-out;" />
+      </svg>
+      Kopykat Digital
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <p class="lead">Got questions? Ready to grow? Let’s chat!</p>
+
+    <section aria-label="Contact form">
+      <form action="mailto:hello@kopykat.digital" method="post" enctype="text/plain" style="max-width: 400px; margin: auto; text-align: left;">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;" /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;" /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid #ccc;"></textarea><br />
+
+        <button type="submit" class="btn" style="width: 100%;">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kopykat Digital — Based in Berlin | <a href="mailto:hello@kopykat.digital">hello@kopykat.digital</a>
+  </footer>
+
+  <style>
+    @keyframes tailwag {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(15deg); }
+    }
+  </style>
+</body>
+</html>
