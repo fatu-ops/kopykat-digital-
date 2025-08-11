@@ -46,6 +46,17 @@ body {
   filter: brightness(0) invert(1); /* keep it inverted for dark bg */
   animation: bounce 2.5s ease-in-out infinite;
 }
+.logo-container {
+  background-color: var(--bg1); /* dark background */
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.logo-container .logo {
+  filter: none; /* remove brightness/invert */
+  height: 60px;
+  width: auto;
 }
 
 @keyframes bounce {
@@ -253,6 +264,14 @@ h2, p {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
+.testimonial-carousel {
+  background-color: var(--bg1);
+  padding: 2rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+}
 
 .testimonial-card:hover {
   transform: scale(1.05);
@@ -263,6 +282,15 @@ h2, p {
   margin-top: 1rem;
   font-style: italic;
   text-align: right;
+}
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* existing styles */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent2);
 }
 
 /* Social Icons */
