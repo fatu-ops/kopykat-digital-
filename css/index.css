@@ -44,6 +44,7 @@ body {
   height: 60px;
   width: auto;
   animation: bounce 2.5s ease-in-out infinite;
+  filter: brightness(0) invert(1);
 }
 
 @keyframes bounce {
@@ -230,3 +231,88 @@ h2, p {
   color: #ffffff; /* White text for max contrast */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Shadow for clarity */
   }
+/* Testimonial Carousel */
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #2b3a6a;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+}
+
+.testimonial-card {
+  flex: 0 0 auto;
+  width: 300px;
+  padding: 1.5rem;
+  background-color: #3c4a8c;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #3c4a8c;
+  border-radius: 8px;
+}
+
+.social-icons a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #1e2a47;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Tooltip */
+.social-icons a::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
