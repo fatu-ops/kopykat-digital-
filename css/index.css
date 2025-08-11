@@ -43,7 +43,6 @@ body {
 .logo-container .logo {
   height: 60px;
   width: auto;
-  filter: brightness(0) invert(1); /* keep it inverted for dark bg */
   animation: bounce 2.5s ease-in-out infinite;
 }
 .logo-container {
@@ -54,7 +53,7 @@ body {
 }
 
 .logo-container .logo {
-  filter: none; /* remove brightness/invert */
+  filter: none;
   height: 60px;
   width: auto;
 }
