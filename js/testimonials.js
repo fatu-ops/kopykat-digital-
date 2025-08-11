@@ -3,7 +3,8 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-if(carousel) {
+if (carousel) {
+  // Mouse events for desktop
   carousel.addEventListener('mousedown', e => {
     isDown = true;
     startX = e.pageX - carousel.offsetLeft;
@@ -17,7 +18,24 @@ if(carousel) {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 3; // Scroll-fast multiplier
+    const walk = (x - startX) * 3;
+    carousel.scrollLeft = scrollLeft - walk;
+  });
+
+  // Touch events for mobile
+  carousel.addEventListener('touchstart', e => {
+    isDown = true;
+    startX = e.touches[0].pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener('touchend', () => isDown = false);
+  carousel.addEventListener('touchcancel', () => isDown = false);
+
+  carousel.addEventListener('touchmove', e => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 3;
     carousel.scrollLeft = scrollLeft - walk;
   });
 }
