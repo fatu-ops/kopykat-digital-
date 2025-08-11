@@ -46,7 +46,7 @@ body {
   animation: bounce 2.5s ease-in-out infinite;
 }
 .logo-container {
-  background-color: var(--bg1); /* dark background */
+  background-color: var(--bg1)
   padding: 0.5rem 1rem;
   border-radius: 12px;
   display: inline-block;
@@ -215,7 +215,7 @@ main {
 .logo-container .logo {
   height: 60px;
   width: auto;
-  filter: brightness(0) invert(1); /* Pop that logo on dark bg */
+
 }
 
 /* Section Backgrounds */
