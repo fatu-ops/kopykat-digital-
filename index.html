@@ -1,82 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kopykat Digital | Berlin eMarketing</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopykat Digital</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <div class="logo" aria-label="Kopykat Digital Logo">
-      <!-- Animated Cat Logo SVG -->
-      <svg viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
-        <circle cx="32" cy="32" r="28" fill="#ff4081" />
-        <path fill="#fff" d="M20 40c5-12 24-12 24 0v4H20v-4z" />
-        <circle cx="22" cy="28" r="4" fill="#222">
-          <animate attributeName="r" values="4;1;4" dur="3s" repeatCount="indefinite" />
-        </circle>
-        <circle cx="42" cy="28" r="4" fill="#222">
-          <animate attributeName="r" values="4;1;4" dur="3s" begin="1.5s" repeatCount="indefinite" />
-        </circle>
-        <path fill="#fff" d="M54 40c-2 6-12 6-10 0" transform-origin="54 40" style="transform-box: fill-box; animation: tailwag 1.5s infinite alternate ease-in-out;" />
-      </svg>
-      Kopykat Digital
+    <div class="logo-container">
+      <img src="images/logo.svg" alt="Kopykat Digital Logo" class="logo">
     </div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>Kopykat Digital</h1>
+    <p>Berlin’s coolest e-marketing crew</p>
   </header>
-
-  <main>
-    <h1>Kopykat Digital — Your Berlin eMarketing Partner</h1>
-    <p class="lead">Copy the best, but make it original. We grow your brand online.</p>
-    <button class="btn" onclick="alert('Ready to chat? Reach us at hello@kopykat.digital')">Get in Touch</button>
-
-    <section id="services" class="services" aria-label="Our Services">
-      <div class="service-card">
-        <svg viewBox="0 0 64 64" width="48" height="48" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="30" fill="#ff4081" />
-          <path fill="#fff" d="M20 20h24v4H20zM20 30h24v4H20zM20 40h16v4H20z" />
-        </svg>
-        <h3>SEO & Content Strategy</h3>
-        <p>Boost your site’s visibility and engage your audience with killer content and smart SEO.</p>
-      </div>
-      <div class="service-card">
-        <svg viewBox="0 0 64 64" width="48" height="48" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="30" fill="#ff4081" />
-          <path fill="#fff" d="M22 20h20v4H22zM22 30h20v4H22zM22 40h12v4H22z" />
-        </svg>
-        <h3>Social Media Management</h3>
-        <p>Grow and manage your social channels to keep your brand buzzing and connected.</p>
-      </div>
-      <div class="service-card">
-        <svg viewBox="0 0 64 64" width="48" height="48" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="30" fill="#ff4081" />
-          <path fill="#fff" d="M18 20h28v4H18zM18 30h28v4H18zM18 40h18v4H18z" />
-        </svg>
-        <h3>PPC & Ads Campaigns</h3>
-        <p>Get the clicks that count with targeted ads designed to maximize your ROI.</p>
-      </div>
-    </section>
-
-    <section id="about" class="about" aria-label="About Kopykat Digital">
-      Based in Berlin, Kopykat Digital crafts smart, tailored digital marketing that turns clicks into customers.
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 Kopykat Digital — Based in Berlin | <a href="mailto:hello@kopykat.digital">hello@kopykat.digital</a>
-  </footer>
-
-  <style>
-    @keyframes tailwag {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(15deg); }
-    }
-  </style>
 </body>
 </html>
