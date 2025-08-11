@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopykat Digital – Style Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0d1b2a, #1b4965, #ff4d6d);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    color: white;
+    text-align: center;
+  }
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .cat {
+    width: 200px;
+    margin: 50px auto;
+  }
+  .eye {
+    animation: blink 4s infinite;
+    transform-origin: center;
+  }
+  @keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    92%, 96% { transform: scaleY(0.1); }
+  }
+  .whisker {
+    animation: twitch 6s infinite;
+    transform-origin: left;
+  }
+  @keyframes twitch {
+    0%, 90%, 100% { transform: rotate(0deg); }
+    95% { transform: rotate(5deg); }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+  p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  .button:hover {
+    background-color: rgba(255,255,255,0.4);
+  }
+</style>
+</head>
+<body>
+
+<!-- Animated Cat Face -->
+<svg class="cat" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="80" fill="#fff" stroke="#000" stroke-width="3"/>
+  <circle class="eye" cx="70" cy="80" r="10" fill="#000"/>
+  <circle class="eye" cx="130" cy="80" r="10" fill="#000"/>
+  <path d="M70 130 Q100 150 130 130" stroke="#000" stroke-width="3" fill="transparent"/>
+  <line class="whisker" x1="20" y1="100" x2="60" y2="90" stroke="#000" stroke-width="2"/>
+  <line class="whisker" x1="20" y1="110" x2="60" y2="110" stroke="#000" stroke-width="2"/>
+  <line class="whisker" x1="140" y1="90" x2="180" y2="100" stroke="#000" stroke-width="2"/>
+  <line class="whisker" x1="140" y1="110" x2="180" y2="110" stroke="#000" stroke-width="2"/>
+</svg>
+
+<h1>Kopykat Digital</h1>
+<p>This is your theme preview – blue/pink gradient, Poppins font, and your animated cat face. We'll apply this styling to all pages next.</p>
+
+<a href="#" class="button">Sample Button</a>
+
+</body>
+    </html>
