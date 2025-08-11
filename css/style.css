@@ -39,3 +39,69 @@ header p {
   0%, 90%, 100% { filter: brightness(1); }
   95% { filter: brightness(0.6); }
                            }
+/* Header container with big white rectangle background */
+.page-header {
+  background: white;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  margin: 2rem 1rem;
+}
+
+/* Logo styling */
+.logo-container .logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Text block with site title and page title */
+.header-text-block {
+  flex-grow: 1;
+  margin-left: 2rem;
+}
+
+/* Main site title */
+.site-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #2c3e50; /* Dark blue */
+  margin: 0;
+}
+
+/* Smaller page title block inside */
+.page-title-block {
+  display: inline-block;
+  background: linear-gradient(135deg, #f39c12, #8e44ad); /* pink to blue gradient */
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Page title text */
+.page-title-block h2 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* Navigation styles same as before */
+.main-nav a {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #f39c12;
+}
