@@ -11,16 +11,8 @@ body {
   justify-content: center;
 }
 
-/* Header text styling */
-header h1 {
-  font-size: 3rem;
-  margin-top: 1rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
+/* Header text styling (remove generic header h1 and p to avoid conflicts) */
+/* We’ll use .site-title and .page-title-block for header texts */
 
 /* Logo animation */
 .logo {
@@ -38,7 +30,8 @@ header p {
 @keyframes blink {
   0%, 90%, 100% { filter: brightness(1); }
   95% { filter: brightness(0.6); }
-                           }
+}
+
 /* Header container with big white rectangle background */
 .page-header {
   background: white;
@@ -50,6 +43,7 @@ header p {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 12px;
   margin: 2rem 1rem;
+  color: #2c3e50; /* Ensure text inside header is dark */
 }
 
 /* Logo styling */
@@ -62,6 +56,8 @@ header p {
 .header-text-block {
   flex-grow: 1;
   margin-left: 2rem;
+  min-width: 180px;
+  text-align: left;
 }
 
 /* Main site title */
@@ -69,8 +65,8 @@ header p {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #2c3e50; /* Dark blue */
   margin: 0;
+  color: #2c3e50; /* Dark blue */
 }
 
 /* Smaller page title block inside */
@@ -92,11 +88,17 @@ header p {
   margin: 0;
 }
 
-/* Navigation styles same as before */
+/* Navigation styles */
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
 .main-nav a {
   color: #2c3e50;
   font-weight: 600;
-  margin-left: 1.5rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -105,3 +107,21 @@ header p {
 .main-nav a.active {
   color: #f39c12;
 }
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-text-block {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .main-nav {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+            }
