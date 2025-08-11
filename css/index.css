@@ -291,6 +291,14 @@ h2, p {
   transform: scale(1.05);
   box-shadow: 0 0 15px var(--accent2);
 }
+.testimonial-carousel {
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.testimonial-carousel:active {
+  cursor: grabbing;
+}
 
 /* Social Icons */
 .social-icons {
