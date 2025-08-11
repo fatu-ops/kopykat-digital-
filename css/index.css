@@ -27,7 +27,7 @@ body {
 
 /* HEADER */
 .page-header {
-  background: white;
+  background: var(--bg1); /* dark navy */
   padding: 2rem 3rem;
   margin: 2rem 1rem;
   border-radius: 16px;
@@ -36,15 +36,16 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  color: var(--text-dark);
+  color: var(--text-light); /* white text */
   z-index: 10;
 }
 
 .logo-container .logo {
   height: 60px;
   width: auto;
+  filter: brightness(0) invert(1); /* keep it inverted for dark bg */
   animation: bounce 2.5s ease-in-out infinite;
-  filter: brightness(0) invert(1);
+}
 }
 
 @keyframes bounce {
